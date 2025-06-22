@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 
 type ListingCardProps = {
+  _id:string,
   room: string;
   link: string;
   name: string;

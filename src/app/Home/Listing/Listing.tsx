@@ -3,7 +3,8 @@ import React from 'react'
 import ListingCard from '../ListingCard/ListingCard'
 import { useEffect, useState } from 'react' 
 
-type ListingType = {  
+type ListingType = { 
+  _id:string, 
   room: string;
   link: string;
   name: string;
@@ -29,7 +30,7 @@ export default function Listing() {
         {Listing.map(item => (
           <ListingCard
             key={item.room}
-            // id={item.room}
+            _id={item._id}
             room={item.room}
             name={item.name}
             link={item.link}
