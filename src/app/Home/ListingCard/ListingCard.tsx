@@ -3,15 +3,14 @@ import React from 'react';
 import Image from 'next/image';
 
 type ListingCardProps = {
-  id: number;
-  room: number;
+  room: string;
   link: string;
   name: string;
 };
 
-export default function ListingCard({ id, room, link, name }: ListingCardProps) {
+export default function ListingCard({ room, link, name }: ListingCardProps) {
   const handleComponentClick = () => {
-    console.log(`Card ${id} clicked`);
+    console.log(`Card ${room} clicked`);
     
   };
 
@@ -28,7 +27,7 @@ export default function ListingCard({ id, room, link, name }: ListingCardProps) 
       </button>
       <h2 className="text-lg font-semibold mt-2">{name}</h2>
       <p>Room: {room}</p>
-      <p>ID: {id}</p>
+      {/* <p>ID: {id}</p> */}
     </div>
   );
 }

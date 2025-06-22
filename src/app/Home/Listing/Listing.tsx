@@ -4,8 +4,7 @@ import ListingCard from '../ListingCard/ListingCard'
 import { useEffect, useState } from 'react' 
 
 type ListingType = {  
-  id: number;
-  room: number;
+  room: string;
   link: string;
   name: string;
 }
@@ -29,8 +28,8 @@ export default function Listing() {
       <div className="flex overflow-x-scrollable gap-4 py-4">
         {Listing.map(item => (
           <ListingCard
-            key={item.id}
-            id={item.id}
+            key={item.room}
+            // id={item.room}
             room={item.room}
             name={item.name}
             link={item.link}
