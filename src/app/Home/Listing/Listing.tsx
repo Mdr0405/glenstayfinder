@@ -18,6 +18,7 @@ export default function Listing() {
       const res = await fetch('/api/listings')
       const data = await res.json()
       setListings(data)
+      console.log(data)
     }
 
     fetchListings()

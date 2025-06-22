@@ -12,6 +12,7 @@ type ListingCardProps = {
 export default function ListingCard({ id, room, link, name }: ListingCardProps) {
   const handleComponentClick = () => {
     console.log(`Card ${id} clicked`);
+    
   };
 
   return (
