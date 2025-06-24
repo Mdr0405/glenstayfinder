@@ -42,6 +42,8 @@ export default function Page({ params }: RoomPageProps) {
             src={src.replace(',', '')} // Remove accidental trailing commas
             alt={`Room ${index + 1}`}
             className="w-64 h-40 object-cover rounded shadow"
+            width={256}
+          height={160}
           />
         ))}
       </div>
