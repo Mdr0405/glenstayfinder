@@ -4,7 +4,7 @@ import ListingCard from '../ListingCard/ListingCard'
 import { useEffect, useState } from 'react' 
 import axios from 'axios'
 type ListingType = { 
-  _id:string, 
+  // _id:string, 
   room: number;
   link: string;
   name: string;
@@ -34,7 +34,7 @@ export default function Listing() {
         {Listing.map(item => (
           <ListingCard
             key={item.room}
-            _id={item._id}
+            // id={item.id}
             room={item.room}
             name={item.name}
             link={item.link}
