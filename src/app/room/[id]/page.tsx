@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Image from 'next/image';
 type RoomPageProps = {
   params: Promise<{ id: number }>;
 };
@@ -37,7 +37,7 @@ export default function Page({ params }: RoomPageProps) {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
         {roomData.images.map((src: string, index: number) => (
-          <img
+          <Image
             key={index}
             src={src.replace(',', '')} // Remove accidental trailing commas
             alt={`Room ${index + 1}`}
