@@ -2,10 +2,10 @@
 import React from 'react'
 import ListingCard from '../ListingCard/ListingCard'
 import { useEffect, useState } from 'react' 
-
+import axios from 'axios'
 type ListingType = { 
   _id:string, 
-  room: string;
+  room: number;
   link: string;
   name: string;
 }
@@ -15,10 +15,14 @@ export default function Listing() {
 
   useEffect(() => {
     const fetchListings = async () => {
-      const res = await fetch('/api/listings')
-      const data = await res.json()
-      setListings(data)
-      console.log(data)
+      try{
+        const res = await axios.get('/api/rooms')
+        setListings(res.data)
+        console.log(res.data)
+      }
+      catch (error) {
+        console.error('Error fetching listings:', error)
+      } 
     }
 
     fetchListings()

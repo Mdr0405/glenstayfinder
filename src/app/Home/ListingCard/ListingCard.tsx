@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 type ListingCardProps = {
   _id:string,
-  room: string;
+  room: number;
   link: string;
   name: string;
 };

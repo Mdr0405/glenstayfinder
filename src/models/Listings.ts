@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
 const ListingSchema = new mongoose.Schema({
-  _id:String,
+  // _id:String,
   name: String,
-  room: String,
+  room: Number,
   link: String,
 }
 );
