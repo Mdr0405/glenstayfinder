@@ -37,7 +37,7 @@ export default function Page({ params }: RoomPageProps) {
   if (!roomData) return <p>Loading...</p>;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-50 text-black">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white px-6">
       <h1 className="text-3xl font-bold mb-4">{roomData.name}</h1>
       <p className="mb-2 text-lg">{roomData.description}</p>
       <p className="mb-2">Price: ₹{roomData.price}</p>
